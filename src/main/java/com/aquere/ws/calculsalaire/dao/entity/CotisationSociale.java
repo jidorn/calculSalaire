@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity(name = "cotisation_sociale")
-public class CotisationSociale extends AbstractEntity<Long> {
+public class CotisationSociale extends AbstractEntity {
 
   /**
    * Nom du régime contenant.
@@ -41,6 +41,18 @@ public class CotisationSociale extends AbstractEntity<Long> {
    */
   @Column(name = "VERSION")
   private int version;
+
+  public CotisationSociale(String regime, double pourcentageTotal, double pourcentageEmployeur, double pourcentageSalarie, double assiete, int version) {
+    this.regime = regime;
+    this.pourcentageTotal = pourcentageTotal;
+    this.pourcentageEmployeur = pourcentageEmployeur;
+    this.pourcentageSalarie = pourcentageSalarie;
+    this.assiete = assiete;
+    this.version = version;
+  }
+
+  public CotisationSociale() {
+  }
 
   public String getRegime() {
     return regime;

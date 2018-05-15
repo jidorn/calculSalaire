@@ -1,17 +1,14 @@
 package com.aquere.ws.calculsalaire.dao.entity;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class AbstractEntity<T> {
+public abstract class AbstractEntity {
 
-	protected T id;
+	@Id
+  @GeneratedValue
+	protected Long id;
 
-	public T getId() {
-		return id;
-	}
-
-	public void setId(T pId) {
-		id = pId;
-	}
 }
