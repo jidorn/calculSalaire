@@ -16,17 +16,17 @@ public class FicheDePaie extends AbstractEntity {
    * le salaire de base.
    */
   @Column(name = "salaire_de_base_ag")
-  private double salaireDeBaseAG;
+  private double salaireDeBase;
 
   /**
    * constructeur avec les paramètres.
    *
    * @param nbJourTravailParAn le nombre de jour.
-   * @param salaireDeBaseAG    le salaire de base.
+   * @param salaireDeBase      le salaire de base.
    */
-  public FicheDePaie(double nbJourTravailParAn, double salaireDeBaseAG) {
+  public FicheDePaie(double nbJourTravailParAn, double salaireDeBase) {
     this.nbJourTravailParAn = nbJourTravailParAn;
-    this.salaireDeBaseAG = salaireDeBaseAG;
+    this.salaireDeBase = salaireDeBase;
   }
 
   public FicheDePaie() {
@@ -40,11 +40,11 @@ public class FicheDePaie extends AbstractEntity {
     this.nbJourTravailParAn = nbJourTravailParAn;
   }
 
-  public double getSalaireDeBaseAG() {
-    return salaireDeBaseAG;
+  public double getSalaireDeBase() {
+    return salaireDeBase;
   }
 
-  public void setSalaireDeBaseAG(double salaireDeBaseAG) {
-    this.salaireDeBaseAG = salaireDeBaseAG;
+  public void setSalaireDeBase(double salaireDeBase) {
+    this.salaireDeBase = salaireDeBase;
   }
 }
