@@ -42,7 +42,18 @@ public class CotisationSociale extends AbstractEntity {
   @Column(name = "VERSION")
   private int version;
 
-  public CotisationSociale(String regime, double pourcentageTotal, double pourcentageEmployeur, double pourcentageSalarie, double assiete, int version) {
+  /**
+   * constructeur avec les paramètres.
+   *
+   * @param regime               le régime.
+   * @param pourcentageTotal     le pourcentage total.
+   * @param pourcentageEmployeur le pourcentage employeur.
+   * @param pourcentageSalarie   le pourcentage salarié.
+   * @param assiete              l'assiete.
+   * @param version              la version.
+   */
+  public CotisationSociale(String regime, double pourcentageTotal, double pourcentageEmployeur,
+                           double pourcentageSalarie, double assiete, int version) {
     this.regime = regime;
     this.pourcentageTotal = pourcentageTotal;
     this.pourcentageEmployeur = pourcentageEmployeur;
