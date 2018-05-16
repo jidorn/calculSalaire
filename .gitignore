@@ -4,18 +4,6 @@
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
-!/.mvn/wrapper/maven-wrapper.jar
 
 # Workspace files are user-specific
 *.sublime-workspace
@@ -43,8 +31,6 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 ### Java template
-# Compiled class file
-*.class
 
 # Log file
 *.log
@@ -56,7 +42,6 @@ GitHub.sublime-settings
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -216,5 +201,4 @@ Temporary Items
 .idea/vcs.xml
 calculSalaire.iml
 src/main/java/com/aquere/ws/calculsalaire/service/
-src/main/resources/
 src/test/
