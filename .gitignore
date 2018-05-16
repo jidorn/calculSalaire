@@ -202,3 +202,13 @@ Temporary Items
 calculSalaire.iml
 src/main/java/com/aquere/ws/calculsalaire/service/
 src/test/
+/.idea/
+.idea/checkstyle-idea.xml
+.idea/checkstyleidea-libs/
+.idea/codeStyles/
+.idea/compiler.xml
+.idea/dataSources.xml
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+src/main/java/com/aquere/ws/calculsalaire/controller/
