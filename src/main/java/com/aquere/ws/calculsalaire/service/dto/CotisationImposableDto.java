@@ -1,58 +1,52 @@
-package com.aquere.ws.calculsalaire.dao.entity;
+package com.aquere.ws.calculsalaire.service.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import com.aquere.ws.calculsalaire.service.enums.RegimeEnum;
 
-@Entity(name = "cotisation_imposable")
-public class CotisationImposable extends AbstractEntity {
+public class CotisationImposableDto {
 
   /**
    * le libelle de la cotisation.
    */
-  @Column
-  private String libelle;
+  private RegimeEnum libelle;
 
   /**
    * la base de calcul du montant de la cotisation.
    */
-  @Column
   private double base;
 
   /**
    * le taux du calcul de la cotisation.
    */
-  @Column
   private double taux;
 
   /**
    * le montant de la cotisation.
    */
-  @Column
   private double montant;
 
+  public CotisationImposableDto() {
+  }
+
   /**
-   * Constructeur avec les paramètres.
+   * constructeur avec les params.
    *
    * @param libelle le libelle.
    * @param base    la base.
    * @param taux    le taux.
    * @param montant le montant.
    */
-  public CotisationImposable(String libelle, double base, double taux, double montant) {
+  public CotisationImposableDto(RegimeEnum libelle, double base, double taux, double montant) {
     this.libelle = libelle;
     this.base = base;
     this.taux = taux;
     this.montant = montant;
   }
 
-  public CotisationImposable() {
-  }
-
-  public String getLibelle() {
+  public RegimeEnum getLibelle() {
     return libelle;
   }
 
-  public void setLibelle(String libelle) {
+  public void setLibelle(RegimeEnum libelle) {
     this.libelle = libelle;
   }
 
@@ -82,7 +76,7 @@ public class CotisationImposable extends AbstractEntity {
 
   @Override
   public String toString() {
-    return String.format("CotisationImposable{libelle='%s', base=%s, taux=%s, montant=%s}",
+    return String.format("CotisationImposableDto{libelle=%s, base=%s, taux=%s, montant=%s}",
       libelle, base, taux, montant);
   }
 }

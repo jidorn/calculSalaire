@@ -47,4 +47,10 @@ public class FicheDePaie extends AbstractEntity {
   public void setSalaireDeBase(double salaireDeBase) {
     this.salaireDeBase = salaireDeBase;
   }
+
+  @Override
+  public String toString() {
+    return String.format("FicheDePaie{nbJourTravailParAn=%s, salaireDeBase=%s}",
+      nbJourTravailParAn, salaireDeBase);
+  }
 }

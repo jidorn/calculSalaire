@@ -1,59 +1,54 @@
-package com.aquere.ws.calculsalaire.dao.entity;
+package com.aquere.ws.calculsalaire.service.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import com.aquere.ws.calculsalaire.service.enums.RegimeEnum;
 
-@Entity(name = "cotisation_sociale")
-public class CotisationSociale extends AbstractEntity {
+public class CotisationSocialeDto {
+
 
   /**
    * Nom du régime contenant.
    */
-  @Column(name = "REGIME")
-  private String regime;
+  private RegimeEnum regime;
 
   /**
    * pourcentage total.
    */
-  @Column(name = "POURC_TOTAL")
   private double pourcentageTotal;
 
   /**
    * pourcentage employeur.
    */
-  @Column(name = "POURC_EMPLOYEUR")
   private double pourcentageEmployeur;
 
   /**
    * pourcentage salarié.
    */
-  @Column(name = "POURC_SALARIE")
   private double pourcentageSalarie;
 
   /**
    * la base de calcul.
    */
-  @Column(name = "ASSIETE")
   private double assiete;
 
   /**
    * la version de la cotisation. Elle se définit par l'année de la cotisation.
    */
-  @Column(name = "VERSION")
   private int version;
 
   /**
-   * constructeur avec les paramètres.
+   * Constructeur avec params.
    *
-   * @param regime               le régime.
-   * @param pourcentageTotal     le pourcentage total.
-   * @param pourcentageEmployeur le pourcentage employeur.
-   * @param pourcentageSalarie   le pourcentage salarié.
+   * @param regime               le regime.
+   * @param pourcentageTotal     le pourcentageTotal.
+   * @param pourcentageEmployeur le pourcentageEmployeur.
+   * @param pourcentageSalarie   le pourcentageSalarie.
    * @param assiete              l'assiete.
    * @param version              la version.
    */
-  public CotisationSociale(String regime, double pourcentageTotal, double pourcentageEmployeur,
-                           double pourcentageSalarie, double assiete, int version) {
+  public CotisationSocialeDto(RegimeEnum regime, double pourcentageTotal,
+                              double pourcentageEmployeur,
+                              double pourcentageSalarie,
+                              double assiete, int version) {
     this.regime = regime;
     this.pourcentageTotal = pourcentageTotal;
     this.pourcentageEmployeur = pourcentageEmployeur;
@@ -62,14 +57,17 @@ public class CotisationSociale extends AbstractEntity {
     this.version = version;
   }
 
-  public CotisationSociale() {
+  /**
+   * le constructeur par défaut.
+   */
+  public CotisationSocialeDto() {
   }
 
-  public String getRegime() {
+  public RegimeEnum getRegime() {
     return regime;
   }
 
-  public void setRegime(String regime) {
+  public void setRegime(RegimeEnum regime) {
     this.regime = regime;
   }
 
@@ -115,8 +113,9 @@ public class CotisationSociale extends AbstractEntity {
 
   @Override
   public String toString() {
-    return String.format("CotisationSociale{regime='%s', pourcentageTotal=%s, "
-      + "pourcentageEmployeur=%s, pourcentageSalarie=%s, assiete=%s, version=%d}",
-      regime, pourcentageTotal, pourcentageEmployeur, pourcentageSalarie, assiete, version);
+    return String.format(regime.getLibelle(),
+      "CotisationSocialeDto{regime=%s, pourcentageTotal=%s, "
+        + "pourcentageEmployeur=%s, pourcentageSalarie=%s, assiete=%s, version=%d}",
+      pourcentageTotal, pourcentageEmployeur, pourcentageSalarie, assiete, version);
   }
 }
