@@ -1,6 +1,6 @@
 package com.aquere.ws.calculsalaire.service.dto;
 
-import com.aquere.ws.calculsalaire.service.enums.RegimeEnum;
+import com.aquere.ws.calculsalaire.service.enums.regimes.UrssafEnum;
 
 public class CotisationSocialeDto {
 
@@ -8,7 +8,7 @@ public class CotisationSocialeDto {
   /**
    * Nom du régime contenant.
    */
-  private RegimeEnum regime;
+  private UrssafEnum regime;
 
   /**
    * pourcentage total.
@@ -45,7 +45,7 @@ public class CotisationSocialeDto {
    * @param assiete              l'assiete.
    * @param version              la version.
    */
-  public CotisationSocialeDto(RegimeEnum regime, double pourcentageTotal,
+  public CotisationSocialeDto(UrssafEnum regime, double pourcentageTotal,
                               double pourcentageEmployeur,
                               double pourcentageSalarie,
                               double assiete, int version) {
@@ -63,11 +63,11 @@ public class CotisationSocialeDto {
   public CotisationSocialeDto() {
   }
 
-  public RegimeEnum getRegime() {
+  public UrssafEnum getRegime() {
     return regime;
   }
 
-  public void setRegime(RegimeEnum regime) {
+  public void setRegime(UrssafEnum regime) {
     this.regime = regime;
   }
 

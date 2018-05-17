@@ -1,13 +1,13 @@
 package com.aquere.ws.calculsalaire.service.dto;
 
-import com.aquere.ws.calculsalaire.service.enums.RegimeEnum;
+import com.aquere.ws.calculsalaire.service.enums.regimes.UrssafEnum;
 
 public class CotisationImposableDto {
 
   /**
    * le libelle de la cotisation.
    */
-  private RegimeEnum libelle;
+  private UrssafEnum libelle;
 
   /**
    * la base de calcul du montant de la cotisation.
@@ -35,18 +35,18 @@ public class CotisationImposableDto {
    * @param taux    le taux.
    * @param montant le montant.
    */
-  public CotisationImposableDto(RegimeEnum libelle, double base, double taux, double montant) {
+  public CotisationImposableDto(UrssafEnum libelle, double base, double taux, double montant) {
     this.libelle = libelle;
     this.base = base;
     this.taux = taux;
     this.montant = montant;
   }
 
-  public RegimeEnum getLibelle() {
+  public UrssafEnum getLibelle() {
     return libelle;
   }
 
-  public void setLibelle(RegimeEnum libelle) {
+  public void setLibelle(UrssafEnum libelle) {
     this.libelle = libelle;
   }
 
